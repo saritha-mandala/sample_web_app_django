@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'new_bar.html' %}
+<div style="margin-top: 80px; width:900px; margin:80px auto;">
+  <form method="POST">
+    {%csrf_token %}
+    <fieldset>
+      <legend> Join NOW </legend>
+      {{ form.as_p}}
+    </fieldset>
+    <button class="btn",type="submit">
+      sign up
+    </button>
+  </form>
+</div>
+{% endblock content %}
